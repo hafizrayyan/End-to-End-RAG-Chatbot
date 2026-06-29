@@ -1,4 +1,13 @@
-from langchain_classic.chains import create_retrieval_chain
+try:
+    # Try the modern explicit path first
+    from langchain.chains.retrieval import create_retrieval_chain
+except ModuleNotFoundError:
+    try:
+        # Try the classic/legacy fallback path
+        from langchain_classic.chains import create_retrieval_chain
+    except ModuleNotFoundError:
+        # Absolute fallback to legacy structures
+        from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
 from rag.prompt import PROMPT
