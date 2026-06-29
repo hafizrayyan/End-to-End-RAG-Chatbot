@@ -1,0 +1,689 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background:#f4f7fb;
+
+    color:#222;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    display:flex;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:#111827;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:20px;
+
+}
+
+.logo{
+
+    margin-bottom:30px;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.clear-btn{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.clear-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.sidebar-footer{
+
+    text-align:center;
+
+    font-size:14px;
+
+    opacity:.8;
+
+}
+
+.sidebar-footer span{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   CHAT AREA
+=========================== */
+
+.chat-container{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#ffffff;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.chat-header{
+
+    padding:25px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.chat-header h1{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.chat-header p{
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   CHAT BOX
+=========================== */
+
+.chat-box{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ===========================
+   MESSAGE
+=========================== */
+
+.message{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+}
+
+.message.user{
+
+    justify-content:flex-end;
+
+}
+
+.avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+
+}
+
+.user .avatar{
+
+    background:#16a34a;
+
+}
+
+.bubble{
+
+    max-width:70%;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    line-height:1.7;
+
+    word-break:break-word;
+
+    background:#eef2ff;
+
+}
+
+.user .bubble{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.bot .bubble{
+
+    background:#f3f4f6;
+
+    color:#222;
+
+}
+
+.bubble ul{
+
+    margin-top:10px;
+
+    margin-left:20px;
+
+}
+
+.bubble li{
+
+    margin-bottom:6px;
+
+}
+
+/* ===========================
+   INPUT AREA
+=========================== */
+
+.input-area{
+
+    border-top:1px solid #ececec;
+
+    padding:18px;
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-end;
+
+    background:white;
+
+}
+
+.input-area textarea{
+
+    flex:1;
+
+    resize:none;
+
+    min-height:55px;
+
+    max-height:180px;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+}
+
+.input-area textarea:focus{
+
+    border-color:#2563eb;
+
+}
+
+#send{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:16px 24px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+#send:hover{
+
+    background:#1d4ed8;
+
+}
+
+#send:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.6;
+
+}
+/* ===========================
+   TYPING INDICATOR
+=========================== */
+
+.typing{
+
+    display:none;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:15px 30px;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+.typing span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    animation:typing 1.4s infinite;
+
+}
+
+.typing span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.typing span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes typing{
+
+    0%{
+        transform:translateY(0);
+        opacity:.3;
+    }
+
+    50%{
+        transform:translateY(-6px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(0);
+        opacity:.3;
+    }
+
+}
+
+/* ===========================
+   MESSAGE ANIMATION
+=========================== */
+
+.message{
+
+    animation:fadeIn .25s ease-in-out;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.chat-box::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.chat-box::-webkit-scrollbar-track{
+
+    background:#f5f5f5;
+
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+
+    background:#bdbdbd;
+
+    border-radius:10px;
+
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover{
+
+    background:#9ca3af;
+
+}
+
+/* Firefox */
+
+.chat-box{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#bdbdbd #f5f5f5;
+
+}
+
+/* ===========================
+   BUTTON EFFECTS
+=========================== */
+
+button{
+
+    transition:all .25s ease;
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   TEXTAREA
+=========================== */
+
+textarea{
+
+    font-family:inherit;
+
+}
+
+textarea::placeholder{
+
+    color:#9ca3af;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.bubble a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+}
+
+.user .bubble a{
+
+    color:white;
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+   CODE BLOCKS
+=========================== */
+
+.bubble pre{
+
+    overflow-x:auto;
+
+    background:#111827;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-top:10px;
+
+}
+
+.bubble code{
+
+    font-family:Consolas, monospace;
+
+}
+
+/* ===========================
+   TABLES
+=========================== */
+
+.bubble table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:10px;
+
+}
+
+.bubble th,
+.bubble td{
+
+    border:1px solid #ddd;
+
+    padding:8px;
+
+    text-align:left;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+    .chat-header h1{
+
+        font-size:24px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .chat-box{
+
+        padding:15px;
+
+    }
+
+    .chat-header{
+
+        padding:15px;
+
+    }
+
+    .input-area{
+
+        padding:12px;
+
+    }
+
+    .bubble{
+
+        max-width:90%;
+
+        font-size:15px;
+
+    }
+
+    #send{
+
+        padding:14px 18px;
+
+    }
+
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.full-width{
+
+    width:100%;
+
+}
