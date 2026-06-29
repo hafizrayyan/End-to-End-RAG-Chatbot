@@ -8,7 +8,7 @@ except ModuleNotFoundError:
     except ModuleNotFoundError:
         # Absolute fallback to legacy structures
         from langchain.chains import create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 
 from rag.prompt import PROMPT
 from rag.llm import get_llm
