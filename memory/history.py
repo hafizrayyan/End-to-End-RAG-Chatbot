@@ -1,5 +1,5 @@
 from langchain_core.chat_history import BaseChatMessageHistory
-from langchain_community.chat_message_histories import InMemoryChatMessageHistory
+from langchain_core.chat_history import InMemoryChatMessageHistory
 
 # This global dictionary holds active chat sessions in your server's RAM
 _memory_store = {}
