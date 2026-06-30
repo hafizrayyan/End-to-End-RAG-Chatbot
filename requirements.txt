@@ -7,7 +7,7 @@ langchain-core
 langchain-text-splitters
 langchain-huggingface
 langchain-pinecone
-langchain-groq
+langchain_google_genai
 
 pinecone
 
