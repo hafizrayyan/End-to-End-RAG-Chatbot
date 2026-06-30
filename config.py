@@ -46,10 +46,10 @@ LLM_MODEL = os.getenv("LLM_MODEL")
 
 # Chunking
 CHUNK_SIZE = 700
-CHUNK_OVERLAP = 100
+CHUNK_OVERLAP = 200
 
 # Retrieval
-TOP_K = 5
+TOP_K = 3
 
 # Memory
 CHAT_HISTORY_LIMIT = 5
