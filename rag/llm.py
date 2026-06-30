@@ -1,4 +1,4 @@
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 from config import (
     GROQ_API_KEY,
@@ -8,10 +8,9 @@ from config import (
 
 def get_llm():
 
-    llm = ChatGroq(
+    llm = langchain_google_genai(
         api_key=GROQ_API_KEY,
         model=LLM_MODEL,
-        temperature=0
-    )
+       )
 
     return llm
