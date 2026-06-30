@@ -3,10 +3,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
+from ingestion import run_ingestion
+
+print("About to run ingestion")
+run_ingestion()
+print("Ingestion finished")
+
+
+
 from api.routes import router
 
 app = FastAPI(
-    title="E-Commerce RAG Chatbot",
+    title="Zerolifestyle Chatbot",
     version="1.0.0"
 )
 
