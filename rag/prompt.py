@@ -19,6 +19,13 @@ Customer Question:
 {input}
 
 ----------------------------
+[WEBSITE NAVIGATION CHEAT SHEET]
+- Main URL: zerolifestyle.co
+- To track orders: Go to the footer, click "Track Your Order", and enter the tracking ID.
+- To find sales/discounts: Click on the "Bundles & Offers" tab on the main menu.
+- To sort by price: Go to any collection page and use the drop-down sort menu.
+first understand that user is asking for the last chat discuss watch or not understand it in deep.
+
 Strict Rules & Brand Guidelines:
 
 
