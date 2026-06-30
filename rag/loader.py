@@ -17,13 +17,13 @@ def extractor(html: str) -> str:
     )
 
 
-def load_website():
-
+   def load_website(url):
     loader = RecursiveUrlLoader(
-        url=WEBSITE_URL,
+        url=url,
         max_depth=2,
-        extractor=extractor
+        extractor=extractor,
     )
+    return loader.load()
 
     documents = loader.load()
 
