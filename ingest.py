@@ -16,7 +16,8 @@ def run_ingestion():
             # 1. Load the website data
             # NOTE: Your loader.py expects WEBSITE_URL from config natively, 
             # but if passing individual URLs, ensure loader.py accepts an argument.
-            docs = load_website() 
+            docs = load_website(url)
+            print(f"Loaded {len(docs)} documents")
             
             # 2. Split it into smaller text chunks
             chunks = split_documents(docs)
