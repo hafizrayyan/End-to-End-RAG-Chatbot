@@ -2,7 +2,7 @@ from langchain_community.document_loaders import RecursiveUrlLoader
 from bs4 import BeautifulSoup
 
 from config import WEBSITE_URL
-
+from langchain_community.document_loaders import WebBaseLoader
 
 def extractor(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
@@ -18,10 +18,8 @@ def extractor(html: str) -> str:
 
 
 def load_website(url):
-    loader = RecursiveUrlLoader(
-        url=url,
-        max_depth=2,
-        extractor=extractor,
+    loader = WebBaseLoader(
+        url=url
     )
 
     documents = loader.load()
