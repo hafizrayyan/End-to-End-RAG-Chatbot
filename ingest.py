@@ -5,7 +5,7 @@ from rag.pinecone_db import upload_documents
 
 def run_ingestion():
     # Split comma-separated string into a clean Python list
-    urls = [url.strip() for url in WEBSITE_URL.split(",")]
+    urls = WEBSITE_URL
     all_chunks = []
 
     print(f"Starting ingestion for {len(urls)} URLs...")
