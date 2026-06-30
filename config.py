@@ -41,6 +41,7 @@ WEBSITE_URL ={
 
 # Models
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+LLM_MODEL = "LLM_MODEL"
 
 
 # Chunking
