@@ -8,7 +8,7 @@ from config import (
 
 def get_llm():
 
-    llm = langchain_google_genai(
+    llm = ChatGoogleGenerativeAI(
         api_key=GROQ_API_KEY,
         model=LLM_MODEL,
        )
