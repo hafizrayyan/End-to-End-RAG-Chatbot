@@ -36,7 +36,13 @@ WEBSITE_URL ={
     "https://zerolifestyle.co/products/meta-smart-watch",
     "https://zerolifestyle.co/products/meta-smart-watch",
     "https://zerolifestyle.co/products/glory-smartwatch",
-    "https://zerolifestyle.co/products/phantom-pro-smart-watch"
+    "https://zerolifestyle.co/products/phantom-pro-smart-watch",
+    "https://zerolifestyle.co/pages/terms-and-conditions",
+    "https://zerolifestyle.co/pages/shipping-policy",
+    "https://zerolifestyle.co/pages/privacy-policy",
+    "https://zerolifestyle.co/pages/warranty-policy",
+    "https://zerolifestyle.co/pages/corporate-policy"
+    
 }
 
 # Models
