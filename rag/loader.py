@@ -18,9 +18,7 @@ def extractor(html: str) -> str:
 
 
 def load_website(url):
-    loader = WebBaseLoader(
-        url=url
-    )
+    loader = WebBaseLoader(url)
 
     documents = loader.load()
 
